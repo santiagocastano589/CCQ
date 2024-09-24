@@ -24,12 +24,13 @@ body{
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 10rem;
+  width: 90%;
   height: 20vh;
   border: none;
   border-spacing: 0;
-  margin-bottom: 5rem;
   background-color: #fff;
+  box-shadow: 7px 7px 30px #899494a6;
+
 }
 
 #customers td, #customers th {
@@ -37,7 +38,6 @@ body{
   padding: 8px;
   text-align: center;
   height: 5rem;
-  
 }
 
 #customers tr:nth-child(even){
@@ -87,9 +87,11 @@ header{
 
 .containerTable{
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  overflow-y: scroll;
 }
 .containerFilter{
   width: 100%;
@@ -102,19 +104,17 @@ header{
   background-color: #0c7973;
 }
 
-table{
-  width: 80%;
+/* table{
+  width: 90%;
   height: 20rem;
   border: none;
   border-spacing: 0;
   overflow-y: scroll;
-  box-shadow: 7px 7px 30px #899494a6;
-}
+} */
 thead{
   width: 100%;
   padding: 5px;
   border-radius: 10px;
-
 }
 
 select{
@@ -134,9 +134,6 @@ select{
   background-color: #ffffff;
   color: #000;
 }
-
-
-
 button{
   width: 10rem;
   margin-left: 1rem;
@@ -151,4 +148,34 @@ button:hover{
   background-color: #c2c2c2;
   transform: translateY(-2px);
   transition: 1s;
+}
+
+footer{
+  width: 100%;
+  height: 12rem;
+  background-color: #0d5855;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+  border-top: 1px solid #000;
+  box-shadow: -10px -2px 10px #0d5855;
+}
+
+footer img{
+  width: 24rem;
+  height: 10rem;
+}
+
+#copy{
+  width: 20%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+span{
+  color: #30e9e0;
 }
