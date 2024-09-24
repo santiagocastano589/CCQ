@@ -1,16 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 import { Camas } from './components/Pages/Camas/Camas'
-import { Filters } from './components/Filters/Filters'
+import { Header } from './components/Layouts/Header/Header'
 
 function App() {
 
   return (
     <>
-      <h1>Clinica central</h1>
-      <div className='containerFilter'>
-        <Filters/>
-      </div>
+      <Header/>
+
       <Camas/>
     </>
   )

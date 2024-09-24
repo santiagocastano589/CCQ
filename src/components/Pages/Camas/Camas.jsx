@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import { Filters } from "../../Filters/Filters";
 export const Camas = () => {
     const [UserList, setUserList] = useState([
         {
@@ -8,7 +8,9 @@ export const Camas = () => {
             edad:18, 
             telefono:"3026545679", 
             estado:'Hospitalizado', 
-            cama:'A66'
+            cama:'A66',
+            servicio:'Urgencias',
+            laboratorio:'Analisis'
         },
         {
             usuario:"Paula Andrea", 
@@ -16,7 +18,9 @@ export const Camas = () => {
             edad:25, 
             telefono:"3026566798", 
             estado:'Hospitalizado', 
-            cama:'B15'
+            cama:'B15',
+            servicio:'UCI',
+            laboratorio:'Analisis'
         },
         {
             usuario:"Camila Martinez", 
@@ -24,50 +28,107 @@ export const Camas = () => {
             edad:23, 
             telefono:"3026777987", 
             estado:'Hospitalizado', 
-            cama:'C22'
+            cama:'C22',
+            servicio:'Inyectologia',
+            laboratorio:'Analisis'
         },
         {
-            usuario:"Edwin Rozo", 
+            usuario:"Edwin Carvajal", 
             cedula:109775365, 
             edad:21, 
             telefono:"3026999875", 
             estado:'Hospitalizado', 
-            cama:'A12'
+            cama:'A12',
+            servicio:'Urgencias',
+            laboratorio:'Observacion'
         },
 ]);
 
-const [Filtered, setFiltered] = useState([])
+const [filtered, setFiltered] = useState([]);
+const [searchTerm, setSearchTerm] = useState('');
 
-    // useEffect(() =>{
-    //     const url = 'https://gaiavet-back.onrender.com/user';
-    //     const camas = async fetch =>(url, {
-    //         headers: {
-    //         'Content-Type': 'application/json',
-    //         Authorization: `Bearer ${authToken}`,
-    //         },
-    // });
+
+useEffect(() =>{
+
+    const filterUser = UserList.filter(user =>
+        user.usuario?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        user.cedula?.toString().includes(searchTerm) ||
+        user.estado?.toLowerCase().includes(searchTerm.toLowerCase())||
+        user.servicio?.toLowerCase().includes(searchTerm.toLowerCase())||
+        user.cama?.toLowerCase().includes(searchTerm.toLowerCase())||
+        user.laboratorio?.toLowerCase().includes(searchTerm.toLowerCase())
+    ) 
+    
+
+    setFiltered(filterUser);
+}, [searchTerm, UserList]);
+
+const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+    console.log(searchTerm);
+  };
 
 
 
 
 
   return (
+    <>
+    <div className='containerFilter'>
+        <div>
+            <select name="servicio" id="servicio" onChange={handleSearchChange}>
+                <option value="">Todos los servicios</option>
+                <option value="Urgencias">Urgencias</option>
+                <option value="Inyectologia">Inyectologia</option>
+                <option value="UCI">UCI</option>
+                <option value="Pedriatria">Pedriatria</option>
+            </select>
+        </div>
+        <div>
+            <input 
+            className='search' 
+            type="text" 
+            placeholder='Buscar paciente' 
+            onChange={handleSearchChange}/>
+        </div>
+
+    </div>
     <div className='containerTable'>
-        <table>
+        <table id='customers'>
             <thead>
                 <tr>
-                    <th>Opcion1</th>
-                    <th>Opcion1</th>
-                    <th>Opcion1</th>
-                    <th>Opcion1</th>
-                    <th>Opcion1</th>
-                    <th>Opcion1</th>
+                    <th>Pabellon</th>
+                    <th>Cama</th>
+                    <th>Ingreso</th>
+                    <th>Tipo Documento</th>
+                    <th>Documento</th>
+                    <th>Folio</th>
+                    <th>Paciente</th>
+                    <th>Fecha de ingreso</th>
+                    <th>Origen de atencion</th>
+                    <th>Tipo concepto</th>
+                    <th>Cups</th>
+                    <th>Nombre de procedimiento</th>
+                    <th>Cantidad</th>
+                    <th>Fecha de Orden</th>
+                    <th>Observaciones</th>
                 </tr>
             </thead>
             <tbody>
                 
                 
-                {UserList.map((user) =>
+                {filtered.length === 0 ? (
+                    <tr>
+                        
+                        <td>
+                        {searchTerm
+                        ? "No se encontraron Resultados de la busqueda"
+                        : "No hay resultados."}
+                        </td>
+                        
+                    </tr>
+                ) : (
+                    filtered.map((user) =>
                     <tr>
                         <td>{user.usuario}</td>
                         <td>{user.cedula}</td>
@@ -75,9 +136,22 @@ const [Filtered, setFiltered] = useState([])
                         <td>{user.telefono}</td>
                         <td>{user.estado}</td>
                         <td>{user.cama}</td>
+                        <td>{user.servicio}</td>
+                        <td>{user.laboratorio}</td>
+                        <td>{user.laboratorio}</td>
+                        <td>{user.laboratorio}</td>
+                        <td>{user.laboratorio}</td>
+                        <td>{user.laboratorio}</td>
+                        <td>{user.laboratorio}</td>
+                        <td>{user.laboratorio}</td>
+                        <td>{user.laboratorio}</td>
                     </tr>
-                )}
+                ))}
             </tbody>
         </table>
     </div>
+    </>
     )}
+
+
+    
