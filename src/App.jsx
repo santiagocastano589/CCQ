@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header/>
-
+      <h1>Tablero de Pacientes</h1>
       <Camas/>
     </>
   )

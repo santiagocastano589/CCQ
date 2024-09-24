@@ -63,13 +63,24 @@ useEffect(() =>{
     setFiltered(filterUser);
 }, [searchTerm, UserList]);
 
+
+
+
 const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
     console.log(searchTerm);
   };
 
 
-
+//   useEffect(() =>{
+//     const response = await fetch('https://'),{
+//         method: 'GET',
+//         headers:{
+//             'Content-type':'Bearer',
+//             Authorizacion : 'Token'
+//         }
+//     }
+// })
 
 
   return (
