@@ -32,7 +32,6 @@ body{
   box-shadow: 7px 7px 30px #899494a6;
   overflow-x: scroll;
   overflow-y: scroll;
-  border-radius: 10px;
 }
 
 #customers td, #customers th {
@@ -61,14 +60,11 @@ body{
   height: 3rem;
 }
 
-
 /*-------------------------Table------------------------*/
 
 h1{ 
   font-size: 2rem;
   color: #0c7973;
-  text-align: center;
-  margin: 1rem 0;
 }
 
 header{
@@ -125,8 +121,8 @@ thead{
 }
 
 select{
-  padding: 0.6rem;
-  width: 15rem;
+  padding: 0.4rem;
+  width: 13rem;
   border: none;
   margin-right: 1rem;
   border-radius: 10px;
@@ -134,8 +130,8 @@ select{
   color: #fff;
 }
 .search{
-  width: 35rem;
-  padding: 0.5rem;
+  width: 30rem;
+  padding: 0.3rem;
   border-radius: 7px;
   border: none;
   background-color: #ffffff;
