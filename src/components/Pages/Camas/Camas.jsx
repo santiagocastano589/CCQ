@@ -1,69 +1,264 @@
 import React, { useEffect, useState } from 'react'
 import { Filters } from "../../Filters/Filters";
+
+
 export const Camas = () => {
+
+
+
+
     const [UserList, setUserList] = useState([
         {
-            usuario:"Diego Lopez", 
-            cedula:109833256, 
-            edad:18, 
-            telefono:"3026545679", 
-            estado:'Hospitalizado', 
+            pabellon: 1,
             cama:'A66',
-            servicio:'Urgencias',
-            laboratorio:'Analisis'
+            ingreso: 'Urgencias',
+            tipoDocumento: 'C.C',
+            documento:1094893772,
+            folio:12,
+            paciente:"Diego Lopez", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'3277',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 10,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
         },
         {
-            usuario:"Paula Andrea", 
-            cedula:1094678365, 
-            edad:25, 
-            telefono:"3026566798", 
-            estado:'Hospitalizado', 
-            cama:'B15',
-            servicio:'UCI',
-            laboratorio:'Analisis'
+            
+            pabellon: 10,
+            cama:'C12',
+            ingreso: 'Urgencias',
+            tipoDocumento: 'T.I',
+            documento:109833256,
+            folio:18,
+            paciente:"Paula andrea", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'122',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 7,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
         },
         {
-            usuario:"Camila Martinez", 
-            cedula:1094452365, 
-            edad:23, 
-            telefono:"3026777987", 
-            estado:'Hospitalizado', 
-            cama:'C22',
-            servicio:'Inyectologia',
-            laboratorio:'Analisis'
+            
+            pabellon: 10,
+            cama:'A66',
+            ingreso: 'Urgencias',
+            tipoDocumento: 'C.C.',
+            documento:109856334,
+            folio:6,
+            paciente:"Edwin Carvajal", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'3277',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 10,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
         },
         {
-            usuario:"Edwin Carvajal", 
-            cedula:109775365, 
-            edad:21, 
-            telefono:"3026999875", 
-            estado:'Hospitalizado', 
-            cama:'A12',
-            servicio:'Urgencias',
-            laboratorio:'Observacion'
+            
+            pabellon: 7,
+            cama:'A66',
+            ingreso: 'Urgencias',
+            tipoDocumento: 'C.C.',
+            documento:4115662,
+            folio:18,
+            paciente:"Andrea Gusman", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'3277',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 10,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
+        },
+        {
+            
+            pabellon: 10,
+            cama:'A66',
+            ingreso: 'Urgencias',
+            tipoDocumento: 'C.C.',
+            documento:109833256,
+            folio:18,
+            paciente:"Diego Lopez", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'3277',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 10,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
+        },
+        {
+            
+            pabellon: 10,
+            cama:'A66',
+            ingreso: 'Urgencias',
+            tipoDocumento: 'C.C.',
+            documento:109833256,
+            folio:18,
+            paciente:"Diego Lopez", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'3277',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 10,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
+        },
+        {
+            
+            pabellon: 10,
+            cama:'A66',
+            ingreso: 'Urgencias',
+            tipoDocumento: 'C.C.',
+            documento:109833256,
+            folio:18,
+            paciente:"Diego Lopez", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'3277',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 10,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
+        },
+        {
+            
+            pabellon: 10,
+            cama:'A66',
+            ingreso: 'Urgencias',
+            tipoDocumento: 'C.C.',
+            documento:109833256,
+            folio:18,
+            paciente:"Diego Lopez", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'3277',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 10,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
+        },
+        {
+            
+            pabellon: 10,
+            cama:'A66',
+            ingreso: 'Urgencias',
+            tipoDocumento: 'C.C.',
+            documento:109833256,
+            folio:18,
+            paciente:"Diego Lopez", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'3277',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 10,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
+        },
+        {
+            
+            pabellon: 10,
+            cama:'A66',
+            ingreso: 'Urgencias',
+            tipoDocumento: 'C.C.',
+            documento:109833256,
+            folio:18,
+            paciente:"Diego Lopez", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'3277',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 10,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
+        },
+        {
+            
+            pabellon: 10,
+            cama:'A66',
+            ingreso: 'Urgencias',
+            tipoDocumento: 'C.C.',
+            documento:109833256,
+            folio:18,
+            paciente:"Diego Lopez", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'3277',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 10,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
+        },
+        {
+            
+            pabellon: 10,
+            cama:'A66',
+            ingreso: 'Urgencias',
+            tipoDocumento: 'C.C.',
+            documento:109833256,
+            folio:18,
+            paciente:"Diego Lopez", 
+            fechaIngreso:"24-08-2024", 
+            origenAtencion:'Dolor',
+            tipoConcepto:'Dolor',
+            cups:'3277',
+            nombreProcedimiento:'Urgencias',
+            cantidad: 10,
+            fechaOrden: '24-08-2024',
+            observaciones: 'Datos de observacion'
         },
 ]);
 
+
+// const [UserList, setUserList] = useState([]);
 const [filtered, setFiltered] = useState([]);
 const [searchTerm, setSearchTerm] = useState('');
 
 
+
 useEffect(() =>{
 
-    const filterUser = UserList.filter(user =>
-        user.usuario?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        user.cedula?.toString().includes(searchTerm) ||
-        user.estado?.toLowerCase().includes(searchTerm.toLowerCase())||
-        user.servicio?.toLowerCase().includes(searchTerm.toLowerCase())||
-        user.cama?.toLowerCase().includes(searchTerm.toLowerCase())||
-        user.laboratorio?.toLowerCase().includes(searchTerm.toLowerCase())
-    ) 
-    
+    const fetchUsers = async() => {
+        try {
+            const response = await fetch('http://localhost:3001/users', {
+                method: 'GET',
+                headers: {
+                    'Content-type': 'application/json',
+                    Authorization: 'Bearer'
+                }
+            });
+            const data = await response.json();
+            if (Array.isArray(data)) {
+                setUserList(data);
+                setFiltered(data);
+              
+            } else {
+              console.error('La respuesta no es un array:', data);
+            }
+          } catch (error) {
+            console.log('Error al traer los datos:', error);
+          };
 
-    setFiltered(filterUser);
-}, [searchTerm, UserList]);
 
-
+        }
+        fetchUsers();
+    }, ['holaa']);
 
 
 const handleSearchChange = (event) => {
@@ -71,6 +266,28 @@ const handleSearchChange = (event) => {
     console.log(searchTerm);
   };
 
+
+  useEffect(() =>{
+
+    const filterUser = UserList.filter(user =>
+        user.pabellon?.toString().includes(searchTerm) ||
+        user.cama?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        user.tipoDocumento?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        user.documento?.toString().includes(searchTerm) ||
+        user.folio?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        user.paciente?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        user.fechaIngreso?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        user.tipoConcepto?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        user.cups?.toLowerCase().includes(searchTerm.toLowerCase())||
+        user.nombreProcedimiento?.toLowerCase().includes(searchTerm.toLowerCase())||
+        user.cantidad?.toString().includes(searchTerm) ||
+        user.fechaOrden?.toLowerCase().includes(searchTerm.toLowerCase())||
+        user.observaciones?.toLowerCase().includes(searchTerm.toLowerCase())
+    ) 
+    
+
+    setFiltered(filterUser);
+}, [searchTerm, UserList]);
 
 //   useEffect(() =>{
 //     const response = await fetch('https://'),{
@@ -140,22 +357,22 @@ const handleSearchChange = (event) => {
                     </tr>
                 ) : (
                     filtered.map((user) =>
-                    <tr>
-                        <td>{user.usuario}</td>
-                        <td>{user.cedula}</td>
-                        <td>{user.edad}</td>
-                        <td>{user.telefono}</td>
-                        <td>{user.estado}</td>
+                    <tr key={user.documento}>
+                        <td>{user.pabellon}</td>
                         <td>{user.cama}</td>
-                        <td>{user.servicio}</td>
-                        <td>{user.laboratorio}</td>
-                        <td>{user.laboratorio}</td>
-                        <td>{user.laboratorio}</td>
-                        <td>{user.laboratorio}</td>
-                        <td>{user.laboratorio}</td>
-                        <td>{user.laboratorio}</td>
-                        <td>{user.laboratorio}</td>
-                        <td>{user.laboratorio}</td>
+                        <td>{user.ingreso}</td>
+                        <td>{user.tipoDocumento}</td>
+                        <td>{user.documento}</td>
+                        <td>{user.folio}</td>
+                        <td>{user.paciente}</td>
+                        <td>{user.fechaIngreso}</td>
+                        <td>{user.origenAtencion}</td>
+                        <td>{user.tipoConcepto}</td>
+                        <td>{user.cups}</td>
+                        <td>{user.nombreProcedimiento}</td>
+                        <td>{user.cantidad}</td>
+                        <td>{user.fechaOrden}</td>
+                        <td>{user.observaciones}</td>
                     </tr>
                 ))}
             </tbody>
