@@ -39,7 +39,6 @@ useEffect(() =>{
         dato.Documento?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         dato.Folio?.toString().includes(searchTerm) ||
         dato.Paciente?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        dato.Origen_Atencion?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         dato.Tipo_Concepto?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         dato.Cups?.toLowerCase().includes(searchTerm.toLowerCase())||
         dato.Nombre_Procedimiento?.toLowerCase().includes(searchTerm.toLowerCase())||
@@ -55,9 +54,18 @@ useEffect(() =>{
 }, [searchTerm, dataCamas]);
 
 
+
 const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+    const value = event.target.value.trim().toLowerCase();
+    setSearchTerm(value);
+};
+
+
+const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    const date = new Date(dateString);
+    return date.toLocaleString('es-ES', options);
+};
 
 
   return (
@@ -116,15 +124,11 @@ const handleSearchChange = (event) => {
                 
                 
                 {filtered.length === 0 ? (
-                    <tr>
                         
-                        <td id='uniq'>
-                        {searchTerm
-                        ? "No se encontraron Resultados de la busqueda"
-                        : "No hay resultados."}
-                        </td>
+                        <p id='uniq'>
+                            {searchTerm ? "No se encontraron Resultados de la busqueda" : "No hay resultados."}
+                        </p>
                         
-                    </tr>
                 ) : (
                     filtered.map((data, index) =>
                     <tr key={index}>
@@ -140,7 +144,7 @@ const handleSearchChange = (event) => {
                         <td>{data.Cups}</td>
                         <td className='fh'>{data.Nombre_Procedimiento}</td>
                         <td>{data.Cantidad}</td>
-                        <td>{data.Fch_Orden}</td>
+                        <td>{formatDate(data.Fch_Orden)}</td>
                         <td className='fh' id='observacion'>{data.Observaciones}</td>
                     </tr>
                 ))}
@@ -150,5 +154,7 @@ const handleSearchChange = (event) => {
     </>
     )}
 
+
+    
 
     

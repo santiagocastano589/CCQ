@@ -1,4 +1,5 @@
-import './App.css'
+// import './App.css'
+import './index.css'
 import { Camas } from './components/Pages/Camas/Camas'
 import { Header } from './components/Layouts/Header/Header'
 import { Footer } from './components/Layouts/Footer/Footer'
