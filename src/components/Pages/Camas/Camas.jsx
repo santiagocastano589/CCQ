@@ -71,6 +71,8 @@ const formatDate = (dateString) => {
   return (
     <>
     <div className='containerFilter'>
+    <h3>Filtrar por pabellon: </h3>
+
         <div>
             <select name="Pabellon" id="Pabellon" onChange={handleSearchChange}>
                 <option value="">TODOS LOS PABELLONES</option>
@@ -85,6 +87,8 @@ const formatDate = (dateString) => {
                 <option value="EXPANSIÓN URGENCIAS">EXPANSIÓN URGENCIAS</option>
             </select>
         </div>
+        <h3>Filtar por busqueda: </h3>
+
         <div>
             <input 
             className='search' 
@@ -92,6 +96,8 @@ const formatDate = (dateString) => {
             placeholder='Buscar paciente' 
             onChange={handleSearchChange}/>
         </div>
+        <h3>Filtrar por fecha: </h3>
+
         <div>
             <input type="date" name="fecha" id="fecha" onChange={handleSearchChange}/>
         </div>
