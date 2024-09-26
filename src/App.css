@@ -24,21 +24,19 @@ body{
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 90%;
+  width: 95%;
   height: 20vh;
   border: none;
   border-spacing: 0;
   background-color: #fff;
   box-shadow: 7px 7px 30px #899494a6;
-  overflow-x: scroll;
   overflow-y: scroll;
 }
 
 #customers td, #customers th {
   border-bottom: 1px solid #00000046;
-  padding: 8px;
-  text-align: center;
-  height: 5rem;
+  /* padding: 8px; */
+  /* height: 2rem; */
 }
 
 #customers tr:nth-child(even){
@@ -51,15 +49,40 @@ body{
 }
 
 #customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  /* padding-top: 12px;
+  padding-bottom: 12px; */
   text-align: center;
   background-color: #0f8d87;
   color: white;
-  width: 7rem;
   height: 3rem;
+  font-size: 15px;
+  padding-left: 14px;
+  padding-right: 14px;
+  width: auto;
+}
+#uniq{
+  width: 100%;
 }
 
+td{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 5%;
+  height: 10rem;
+  font-size: 14px;
+}
+
+.fh{
+  width: 15%;
+  font-size: 12px;
+  padding-left: 15px;
+}
+#observacion{
+  height: 9rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
 /*-------------------------Table------------------------*/
 
 h1{ 
@@ -107,18 +130,6 @@ header{
   background-color: #0c7973;
 }
 
-/* table{
-  width: 90%;
-  height: 20rem;
-  border: none;
-  border-spacing: 0;
-  overflow-y: scroll;
-} */
-thead{
-  width: 100%;
-  padding: 5px;
-  border-radius: 10px;
-}
 
 select{
   padding: 0.4rem;

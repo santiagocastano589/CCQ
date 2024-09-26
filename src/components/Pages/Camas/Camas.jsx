@@ -4,311 +4,81 @@ import { Filters } from "../../Filters/Filters";
 
 export const Camas = () => {
 
-
-
-
-//     const [UserList, setUserList] = useState([
-//         {
-//             pabellon: 1,
-//             cama:'A66',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'C.C',
-//             documento:1094893772,
-//             folio:12,
-//             paciente:"Diego Lopez", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'3277',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 10,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-//         {
-            
-//             pabellon: 10,
-//             cama:'C12',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'T.I',
-//             documento:109833256,
-//             folio:18,
-//             paciente:"Paula andrea", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'122',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 7,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-//         {
-            
-//             pabellon: 10,
-//             cama:'A66',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'C.C.',
-//             documento:109856334,
-//             folio:6,
-//             paciente:"Edwin Carvajal", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'3277',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 10,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-//         {
-            
-//             pabellon: 7,
-//             cama:'A66',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'C.C.',
-//             documento:4115662,
-//             folio:18,
-//             paciente:"Andrea Gusman", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'3277',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 10,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-//         {
-            
-//             pabellon: 10,
-//             cama:'A66',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'C.C.',
-//             documento:109833256,
-//             folio:18,
-//             paciente:"Diego Lopez", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'3277',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 10,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-//         {
-            
-//             pabellon: 10,
-//             cama:'A66',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'C.C.',
-//             documento:109833256,
-//             folio:18,
-//             paciente:"Diego Lopez", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'3277',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 10,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-//         {
-            
-//             pabellon: 10,
-//             cama:'A66',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'C.C.',
-//             documento:109833256,
-//             folio:18,
-//             paciente:"Diego Lopez", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'3277',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 10,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-//         {
-            
-//             pabellon: 10,
-//             cama:'A66',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'C.C.',
-//             documento:109833256,
-//             folio:18,
-//             paciente:"Diego Lopez", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'3277',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 10,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-//         {
-            
-//             pabellon: 10,
-//             cama:'A66',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'C.C.',
-//             documento:109833256,
-//             folio:18,
-//             paciente:"Diego Lopez", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'3277',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 10,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-//         {
-            
-//             pabellon: 10,
-//             cama:'A66',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'C.C.',
-//             documento:109833256,
-//             folio:18,
-//             paciente:"Diego Lopez", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'3277',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 10,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-//         {
-            
-//             pabellon: 10,
-//             cama:'A66',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'C.C.',
-//             documento:109833256,
-//             folio:18,
-//             paciente:"Diego Lopez", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'3277',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 10,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-//         {
-            
-//             pabellon: 10,
-//             cama:'A66',
-//             ingreso: 'Urgencias',
-//             tipoDocumento: 'C.C.',
-//             documento:109833256,
-//             folio:18,
-//             paciente:"Diego Lopez", 
-//             fechaIngreso:"24-08-2024", 
-//             origenAtencion:'Dolor',
-//             tipoConcepto:'Dolor',
-//             cups:'3277',
-//             nombreProcedimiento:'Urgencias',
-//             cantidad: 10,
-//             fechaOrden: '24-08-2024',
-//             observaciones: 'Datos de observacion'
-//         },
-// ]);
-
-
-
-
-
-const [UserList, setUserList] = useState([]);
 const [filtered, setFiltered] = useState([]);
 const [searchTerm, setSearchTerm] = useState('');
 
+const [dataCamas, setCamasData] = useState([]);
 
 
 useEffect(() =>{
 
-    const fetchUsers = async() => {
+    const fetchCamas = async() => {
         try {
-            const response = await fetch('http://localhost:3001/', {
-                method: 'GET',
-            });
-            const data = await response.json();
-            if (Array.isArray(data)) {
-                setUserList(data);
-                setFiltered(data);
-              
-            } else {
-              console.error('La respuesta no es un array:', data);
-            }
+            const response = await fetch('http://localhost:3000/');
+            const camas = await response.json();            
+            setCamasData(camas.recordset || [])
+            
+            console.log(camas);
+            
           } catch (error) {
             console.log('Error al traer los datos:', error);
           };
-
-
         }
-        fetchUsers();
-    }, ['holaa']);
+        fetchCamas();
+    }, []);
+
+
+
+
+  useEffect(() =>{
+    if (Array.isArray(dataCamas)) {
+        
+    
+    const filterCamas = dataCamas.filter(dato =>
+        dato.Pabellon?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        dato.Cama?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        dato.Ingreso?.toString().includes(searchTerm) ||
+        dato.Tip_Doc?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        dato.Documento?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        dato.Folio?.toString().includes(searchTerm) ||
+        dato.Paciente?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        dato.Origen_Atencion?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        dato.Tipo_Concepto?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        dato.Cups?.toLowerCase().includes(searchTerm.toLowerCase())||
+        dato.Nombre_Procedimiento?.toLowerCase().includes(searchTerm.toLowerCase())||
+        dato.Cantidad?.toString().includes(searchTerm) ||
+        dato.Fch_Orden?.toLowerCase().includes(searchTerm.toLowerCase())||
+        dato.Observaciones?.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    setFiltered(filterCamas);
+ 
+}else{
+    setFiltered([]);
+}
+
+}, [searchTerm, dataCamas]);
 
 
 const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
-    console.log(searchTerm);
   };
-
-
-  useEffect(() =>{
-
-    const filterUser = UserList.filter(user =>
-        user.pabellon?.toString().includes(searchTerm) ||
-        user.cama?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        user.tipoDocumento?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        user.documento?.toString().includes(searchTerm) ||
-        user.folio?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        user.paciente?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        user.fechaIngreso?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        user.tipoConcepto?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        user.cups?.toLowerCase().includes(searchTerm.toLowerCase())||
-        user.nombreProcedimiento?.toLowerCase().includes(searchTerm.toLowerCase())||
-        user.cantidad?.toString().includes(searchTerm) ||
-        user.fechaOrden?.toLowerCase().includes(searchTerm.toLowerCase())||
-        user.observaciones?.toLowerCase().includes(searchTerm.toLowerCase())
-    ) 
-    
-
-    setFiltered(filterUser);
-}, [searchTerm, UserList]);
-
-//   useEffect(() =>{
-//     const response = await fetch('https://'),{
-//         method: 'GET',
-//         headers:{
-//             'Content-type':'Bearer',
-//             Authorizacion : 'Token'
-//         }
-//     }
-// })
 
 
   return (
     <>
     <div className='containerFilter'>
         <div>
-            <select name="servicio" id="servicio" onChange={handleSearchChange}>
-                <option value="">Todos los servicios</option>
-                <option value="Urgencias">Urgencias</option>
-                <option value="Inyectologia">Inyectologia</option>
-                <option value="UCI">UCI</option>
-                <option value="Pedriatria">Pedriatria</option>
+            <select name="Pabellon" id="Pabellon" onChange={handleSearchChange}>
+                <option value="">TODOS LOS PABELLONES</option>
+                <option value="URGENCIAS">URGENCIAS</option>
+                <option value="UCI ADULTOS">UCI ADULTOS</option>
+                <option value="OBSERVACION ADULTOS">OBSERVACION ADULTOS</option>
+                <option value="HOSPITALIZACION 2 PISO">HOSPITALIZACION 2 PISO</option>
+                <option value="HOSPITALIZACION 3 PISO">HOSPITALIZACION 3 PISO</option>
+                <option value="HOSPITALIZACION 4 PISO">HOSPITALIZACION 4 PISO</option>
+                <option value="HOSPITALIZACION 5 PISO">HOSPITALIZACION 5 PISO</option>
+                <option value="HOSPITALIZACION 6 PISO">HOSPITALIZACION 6 PISO</option>
+                <option value="EXPANSIÓN URGENCIAS">EXPANSIÓN URGENCIAS</option>
             </select>
         </div>
         <div>
@@ -331,7 +101,6 @@ const handleSearchChange = (event) => {
                     <th>Documento</th>
                     <th>Folio</th>
                     <th>Paciente</th>
-                    <th>Fecha de ingreso</th>
                     <th>Origen de atencion</th>
                     <th>Tipo concepto</th>
                     <th>Cups</th>
@@ -347,7 +116,7 @@ const handleSearchChange = (event) => {
                 {filtered.length === 0 ? (
                     <tr>
                         
-                        <td>
+                        <td id='uniq'>
                         {searchTerm
                         ? "No se encontraron Resultados de la busqueda"
                         : "No hay resultados."}
@@ -355,23 +124,22 @@ const handleSearchChange = (event) => {
                         
                     </tr>
                 ) : (
-                    filtered.map((user) =>
-                    <tr key={user.documento}>
-                        <td>{user.pabellon}</td>
-                        <td>{user.cama}</td>
-                        <td>{user.ingreso}</td>
-                        <td>{user.tipoDocumento}</td>
-                        <td>{user.documento}</td>
-                        <td>{user.folio}</td>
-                        <td>{user.paciente}</td>
-                        <td>{user.fechaIngreso}</td>
-                        <td>{user.origenAtencion}</td>
-                        <td>{user.tipoConcepto}</td>
-                        <td>{user.cups}</td>
-                        <td>{user.nombreProcedimiento}</td>
-                        <td>{user.cantidad}</td>
-                        <td>{user.fechaOrden}</td>
-                        <td>{user.observaciones}</td>
+                    filtered.map((data, index) =>
+                    <tr key={index}>
+                        <td className='fh'>{data.Pabellon}</td>
+                        <td>{data.Cama}</td>
+                        <td>{data.Ingreso}</td>
+                        <td>{data.Tip_Doc}</td>
+                        <td>{data.Documento}</td>
+                        <td>{data.Folio}</td>
+                        <td className='fh'>{data.Paciente}</td>
+                        <td>{data.Origen_Atencion}</td>
+                        <td className='fh'>{data.Tipo_Concepto}</td>
+                        <td>{data.Cups}</td>
+                        <td className='fh'>{data.Nombre_Procedimiento}</td>
+                        <td>{data.Cantidad}</td>
+                        <td>{data.Fch_Orden}</td>
+                        <td className='fh' id='observacion'>{data.Observaciones}</td>
                     </tr>
                 ))}
             </tbody>
