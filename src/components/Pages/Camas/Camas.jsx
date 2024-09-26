@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Filters } from "../../Filters/Filters";
 
 
 export const Camas = () => {
@@ -37,8 +36,6 @@ useEffect(() =>{
     const filterCamas = dataCamas.filter(dato =>
         dato.Pabellon?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         dato.Cama?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        dato.Ingreso?.toString().includes(searchTerm) ||
-        dato.Tip_Doc?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         dato.Documento?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         dato.Folio?.toString().includes(searchTerm) ||
         dato.Paciente?.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -47,8 +44,7 @@ useEffect(() =>{
         dato.Cups?.toLowerCase().includes(searchTerm.toLowerCase())||
         dato.Nombre_Procedimiento?.toLowerCase().includes(searchTerm.toLowerCase())||
         dato.Cantidad?.toString().includes(searchTerm) ||
-        dato.Fch_Orden?.toLowerCase().includes(searchTerm.toLowerCase())||
-        dato.Observaciones?.toLowerCase().includes(searchTerm.toLowerCase())
+        dato.Fch_Orden?.toLowerCase().includes(searchTerm.toLowerCase())
     )
     setFiltered(filterCamas);
  
@@ -71,7 +67,7 @@ const handleSearchChange = (event) => {
             <select name="Pabellon" id="Pabellon" onChange={handleSearchChange}>
                 <option value="">TODOS LOS PABELLONES</option>
                 <option value="URGENCIAS">URGENCIAS</option>
-                <option value="UCI ADULTOS">UCI ADULTOS</option>
+                <option value="UCIN ADULTOS">UCIN ADULTOS</option>
                 <option value="OBSERVACION ADULTOS">OBSERVACION ADULTOS</option>
                 <option value="HOSPITALIZACION 2 PISO">HOSPITALIZACION 2 PISO</option>
                 <option value="HOSPITALIZACION 3 PISO">HOSPITALIZACION 3 PISO</option>
@@ -88,6 +84,12 @@ const handleSearchChange = (event) => {
             placeholder='Buscar paciente' 
             onChange={handleSearchChange}/>
         </div>
+        <div>
+            <input type="date" name="fecha" id="fecha" onChange={handleSearchChange}/>
+        </div>
+        {/* <div>
+            <input type="time" name="" id="" onChange={handleSearchChange}/>
+        </div> */}
 
     </div>
     <div className='containerTable'>

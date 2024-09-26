@@ -15,7 +15,12 @@ body{
   width: 100vw;
   height: 100vh;
   /* background-color: #363636;   */
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  background-color: #e5e5f7;
+  /* opacity: 0.9;
+  background-image:  radial-gradient(#0f8d87bb 2px, transparent 2px), radial-gradient(#0f8d87cb 2px, #e5e5f7 2px);
+  background-size: 80px 80px;
+  background-position: 0 0,40px 40px; */
 }
 
 
@@ -49,8 +54,7 @@ body{
 }
 
 #customers th {
-  /* padding-top: 12px;
-  padding-bottom: 12px; */
+
   text-align: center;
   background-color: #0f8d87;
   color: white;
@@ -62,6 +66,7 @@ body{
 }
 #uniq{
   width: 100%;
+  text-align: center;
 }
 
 td{
@@ -78,23 +83,24 @@ td{
   font-size: 12px;
   padding-left: 15px;
 }
-#observacion{
-  height: 9rem;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-/*-------------------------Table------------------------*/
+
+/*-------------------------End Table------------------------*/
 
 h1{ 
   font-size: 2rem;
   color: #0c7973;
 }
-
+h2{
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 5px 3px 15px #202020;
+  color: #fff;
+  /* color: #0d5855; */
+}
 header{
   width: 100%;
   height: 6rem;
-  /* background-color: #363636; */
-  /* background-color: #13706c; */
   background-color: #fff;
   display: flex;
   border-bottom: 1px solid #0c7973;
@@ -108,7 +114,21 @@ header{
   width: 12rem;
   height: 5rem;
 }
-
+.sub{
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  /* background-color: #0f8d87;
+  opacity: 1;
+  background-image:  radial-gradient(#ffffff 2px, transparent 2px), radial-gradient(#ffffff 2px, #0f8d87 2px);
+  background-size: 80px 80px;
+  background-position: 0 0,40px 40px; */
+  background-image: url('./assets/fondo.svg');
+  background-size: cover;
+  background-position: center;
+}
 .containerTable{
   width: 100%;
   height: 100vh;
@@ -122,14 +142,14 @@ header{
 .containerFilter{
   width: 100%;
   height: 5rem;
-  margin: 1rem 0 2rem;
+  margin: 0 0 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   padding: 20px;
   background-color: #0c7973;
+  box-shadow: 3px 3px 15px #000000c4;
 }
-
 
 select{
   padding: 0.4rem;
@@ -147,6 +167,15 @@ select{
   border: none;
   background-color: #ffffff;
   color: #000;
+}
+
+#fecha{
+  width: 13rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #0d5855;
+  color: #fff;
 }
 button{
   width: 10rem;

@@ -5,7 +5,7 @@ export const Header = () => {
     <>
         <header>
             <img src={LogoClinica} alt="LogoClinica" className='imgClinica'/>
-            <h1>Clinica Central del Quindio</h1>
+            <h1>Clínica Central del Quíndio</h1>
         </header>
     </>
   )
